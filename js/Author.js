@@ -123,13 +123,23 @@ class Book {
           <img src="${element.image}" class="card-img-top" alt="...">
         <h3 class="card-title">Title : ${element.title}</h3>
         <div class="card-content">
-          <p>Author : ${element.author}</p>
+          <p>Author :<a href="http://127.0.0.1:5500/HTML/Author.html?author=${element.author}"> ${element.author}</a></p>
         </div>
       </div>        
         `;
       // Add a class to the newly created element
       bookFromAuthor.classList.add("card");
       document.getElementById("card-author-books").appendChild(bookFromAuthor);
+      document.getElementById("authorName").textContent = element.author;
+      document.getElementById("booksBy").textContent = `Books BY ${element.author}`;
+        
+        let bookrate = 0;
+      if (element.rating > bookrate) {
+        bookrate =element.rating;
+           
+      }
+      console.log(bookrate);
+      document.getElementById("")
     });
     // add the author name
     // not completed yet
@@ -155,7 +165,7 @@ class Book {
             <img src="${element.image}" class="card-img-top" alt="...">
           <h3 class="card-title">Title : ${element.title}</h3>
           <div class="card-content">
-            <p>Author : ${element.author}</p>
+          <p>Author :<a href="http://127.0.0.1:5500/HTML/Author.html?author=${element.author}"> ${element.author}</a></p>
           </div>
         </div>
           `;
@@ -163,6 +173,8 @@ class Book {
           document
             .getElementById("SuggestionsBooks")
             .appendChild(SuggestionsBokk);
+        
+
         });
       });
   }

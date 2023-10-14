@@ -24,9 +24,11 @@ section {
 }
 .hero-section {
   display: grid;
-  grid-template-columns: repeat(2, 40%);
-  height: 500px;
+  grid-template-columns: 40% 40% 20%;
+  height: 550px;
+  padding-top: 30px;
   background-color: #f1efef;
+  overflow: hidden;
 }
 
 section h2 {
@@ -63,10 +65,10 @@ section h2 {
 
 
 .author-avatar {
-  width: 50rem;
-  height: 400px;
+  /* width: 50rem; */
+  height: 450px;
   border-radius: 50%; /* Create a circular image by setting border-radius to 50% */
-  margin-bottom: 50px;
+  /* margin-bottom: 35px; */
 }
 .best-seller {
   width: 7rem;
@@ -102,17 +104,19 @@ section h2 {
 }
 
 .author-info {
-  width: 60%;
-  overflow: hidden;
+  width: 50%;
+  /* overflow: hidden; */
   position: relative;
+  
 }
 
 .author-avatar {
-  width: 150%; /* Increase the width to 150% to make it overflow the container */
+  width: 160%; /* Increase the width to 150% to make it overflow the container */
   position: absolute;
   left: -50%; /* Move the image 45% to the left */
-  bottom: -40px;
+  /* bottom: -40px; */
   /* top: 1px; */
+  border: #e55604 solid 2px;
 }
 :root {
   --red: #e55604;
