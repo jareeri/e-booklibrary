@@ -133,13 +133,8 @@ class Book {
       document.getElementById("authorName").textContent = element.author;
       document.getElementById("booksBy").textContent = `Books BY ${element.author}`;
         
-        let bookrate = 0;
-      if (element.rating > bookrate) {
-        bookrate =element.rating;
-           
-      }
-      console.log(bookrate);
-      document.getElementById("")
+        
+      
     });
     // add the author name
     // not completed yet
@@ -177,6 +172,25 @@ class Book {
 
         });
       });
+
+    //   document.getElementById("topRatedBookImg").textContent = ;
+    // finding the highest book rate and add it to the top rate card
+      let bookrate = 0;
+      for (let index = 0; index < booksJson.length; index++) {
+        if (booksJson[index].rating >bookrate ) {
+            bookrate = booksJson[index].rating
+            console.log(bookrate);
+            if (index+1 === booksJson.length) {
+                console.log("abdddd");
+                document.getElementById("topRatedBookImg").setAttribute("src", booksJson[index].image);
+                document.getElementById("topratedbook").textContent = booksJson[index].title;
+                document.getElementById("bookrate").textContent = booksJson[index].rating;
+
+            }
+        } 
+
+        
+      }
   }
   
   document.addEventListener("DOMContentLoaded", () => {
